@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Footer = () =>{
-  var nama = "FIRMWARE STUDIO";
+const Footer = props =>{
+  //var nama = "FIRMWARE STUDIO";
 return(
   <div>
-  <h5>Developer by {nama} </h5>
-  <h6>CopyRight@ 2018</h6>
+  <h5>Kumpulan List {props.name} </h5>
+  <h6>@{props.tahun}</h6>
   </div>
    );
 };
