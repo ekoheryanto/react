@@ -3,7 +3,7 @@ import Header from './Header';
 import Main from './Main'
 import Top from './Top';
 import Footer from './Footer';
-import List from './List';
+//import List from './List';
 
 
 class App extends Component {
@@ -13,7 +13,9 @@ class App extends Component {
         <Header list="Makanan terbaik" />
         <Top/>
         <Main/>
-        <List />
+        {
+          //<List />
+        }
         <Footer name ="Makanan Khas Nusantara dari sabang s/d merauke" tahun ="2018"/>
       </div>
     );

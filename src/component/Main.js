@@ -5,7 +5,9 @@ constructor(props){
 super(props);
 this.state ={
 data : "Menu Makanan",
-data2 : "Menu Minuman"
+data2 : "Menu Minuman",
+inputvalue:"",
+inputvalue2:""
 };
 this.handleklik = this.handleklik.bind(this);
 this.handleonChange = this.handleonChange.bind(this);
@@ -23,9 +25,9 @@ data2 :state.data}
 });
 };
 
-handleonChange(){
-console.log('jalan')
-
+handleonChange(value, e){
+// console.log(e.target.value)
+this.setState({[value]:e.target.value});
 };
 
 render(){
@@ -35,8 +37,9 @@ return(
 <h3>{this.state.data2}</h3>
 <button onClick={this.handleklik}>Rubah Data</button>
 <br/>
-<br/>
-<input type="text" placeholder=" nama anda" onChange={this.handleonChange}/>
+<p>Negara</p>
+<input type="text" placeholder="Nama" value={this.state.inputvalue} onChange={e=>this.handleonChange("inputvalue",e)}/>
+<input type="text" placeholder="Kota" value={this.state.inputvalue2} onChange={e=>this.handleonChange("inputvalue2",e)}/>
 </div>
 )
 };
