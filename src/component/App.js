@@ -13,7 +13,7 @@ class App extends Component {
       <div>
         <Header list="Makanan terbaik" />
         <Top/>
-        <Main/>
+        <Main menuminuman={[{nama : "Juisce Alpukat",harga:10000},{nama:"Juice Pepaya",harga:15000},{nama : "Juice Mangga",harga : 15000}]}/>
         {
           //<List />
         }

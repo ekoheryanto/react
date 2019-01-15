@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 
+
 class Main extends Component{
 constructor(props){
 super(props);
@@ -7,7 +8,8 @@ this.state ={
 data : "Menu Makanan",
 data2 : "Menu Minuman",
 inputvalue:"",
-inputvalue2:""
+inputvalue2:"",
+menumakanan :[{nama : "Ayam Goreng",harga:10000},{nama:"Ayam Bakar",harga:15000},{nama : "Ayam Sayur",harga : 15000}]
 };
 this.handleklik = this.handleklik.bind(this);
 this.handleonChange = this.handleonChange.bind(this);
@@ -40,6 +42,26 @@ return(
 <p>Negara</p>
 <input type="text" placeholder="Nama" value={this.state.inputvalue} onChange={e=>this.handleonChange("inputvalue",e)}/>
 <input type="text" placeholder="Kota" value={this.state.inputvalue2} onChange={e=>this.handleonChange("inputvalue2",e)}/>
+<h2>Menu Makanan</h2>
+{this.state.menumakanan.map((value, index)=>{
+return(
+  <div key={index}>
+  <p>No.{index + 1}</p>
+ <p>Nama Makanan : {value.nama}</p>
+ <p>Harga : {value.harga}</p>
+  </div>
+)
+})}
+<h2>Menu Minuman</h2>
+{this.props.menuminuman.map((value, index)=>{
+return(
+  <div key={index}>
+  <p>No.{index +1}</p>
+  <p>Nama Minuman : {value.nama}</p>
+  <p>Harga : {value.harga}</p>
+  </div>
+)
+})}
 </div>
 )
 };
