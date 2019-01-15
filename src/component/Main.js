@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+const menuroti =[{nama:"Roti Tawar",harga:12000},{nama:"Roti Keju",harga:15000},{nama:"Roti Coklat",harga:2000}];
 
 class Main extends Component{
 constructor(props){
@@ -62,6 +62,17 @@ return(
   </div>
 )
 })}
+<h2>Menu Roti</h2>
+{menuroti.map((value, index)=>{
+return(
+<div key={index}>
+<p>No.{index+1}</p>
+<p>Jenis Roti : {value.nama}</p>
+<p>Harga : {value.harga}</p>
+</div>
+)
+})}
+
 </div>
 )
 };
