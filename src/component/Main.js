@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-const menuroti =[{nama:"Roti Tawar",harga:12000},{nama:"Roti Keju",harga:15000},{nama:"Roti Coklat",harga:2000}];
+import menuroti from "./lib/Food"
 
 class Main extends Component{
 constructor(props){
