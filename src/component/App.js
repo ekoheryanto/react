@@ -4,8 +4,9 @@ import Header from './Header';
 import Top from './Top';
 import Footer from './Footer';
 import Test from './Test';
+import CustomInput from './CustomInput'
 //import List from './List';
-import Form from './Form';
+//import Form from './Form';
 
 
 class App extends Component {
@@ -14,9 +15,9 @@ class App extends Component {
       <div>
         <Header list="Makanan terbaik" />
         <Top/>
-        <Form/>
-
+        <CustomInput/>
         {
+          //<Form/>
           //<Main menuminuman={[{nama : "Juisce Alpukat",harga:10000},{nama:"Juice Pepaya",harga:15000},{nama : "Juice Mangga",harga : 15000}]}/>
           //<List />
         }
