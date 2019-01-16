@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import "./header.css";
+const cssjudul = {color : "orange"};
 class Header extends Component{
   constructor(props){
   super(props);
@@ -39,13 +40,13 @@ console.log("jalan : componentDidMount")
       <div>
        {this.state.statusRendering === true ? (
          <div>
-         <h1>Selamat Datang</h1>
-         <h2>Silahakan Pilih Menu</h2>
+         <h1 style={{color:"white", backgroundColor:"green"}}>Selamat Datang</h1>
+         <h2 style={cssjudul}>Silahkan Pilih Menu</h2>
          </div>
        ):(
          <div>
-         <h1>Terima Kasih Atas Kunjungan Anda</h1>
-         <h2>Silahkan Datang Kembali</h2>
+         <h1 id="judulnya">Terima Kasih Atas Kunjungan Anda</h1>
+         <h2 className="judulkedua">Silahkan Datang Kembali</h2>
          </div>
        )}
        <button onClick={this.handleElement}>Rubah</button>
